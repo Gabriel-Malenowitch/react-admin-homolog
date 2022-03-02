@@ -12,12 +12,23 @@ const filters = [
 	<SearchInput key={0} source="q" alwaysOn/>,
 ];
 
+const useStyle = makeStyles({
+	emailField:{
+		textDecoration: "none",
+		color: "#93a1f1",
+	},
+	hover: {
+		color: "#F00",
+	}
+});
+
 export function UserList(props: ListProps){
+	const classes = useStyle();
 	return(
 		<List {...props} bulkActionButtons={false} filters={filters} title="Usuários" >
 			<Datagrid rowClick="show" expand={<PostPanel/>}>
 				<TextField label="Nome de usuário" source="username" />
-				<EmailField label="Email" source="email" />
+				<EmailField label="Email" source="email" className={classes.emailField} />
 				<CardsNumberField/>
 
 				<ReferenceField label="Titulo do post" source="id" reference="cards">

@@ -6,8 +6,9 @@ import {
 } from "react-admin";
 
 export function UserEdit(props: EditProps){
+	/*mutationMode="pessimistic"*/
 	return(
-		<Edit {...props} undoable={true} mutationMode="pessimistic">
+		<Edit {...props} undoable={true}>
 			<SimpleForm>
 				<TextInput source="name" />
 				<TextInput source="email" />

@@ -5,6 +5,7 @@ import {
 import User from "./components/CRUDReactAdmin";
 import { apis } from "./routes";
 import "./App.css";
+import UserIcon from "@material-ui/icons/Group";
 
 
 function App() {
@@ -22,8 +23,8 @@ function App() {
 				}
 			}
 		}}>
-			<Resource name={apis.users} list={User.UserList} edit={User.UserEdit} create={User.UserCreate} />
-			<Resource name={apis.cards} list={ListGuesser} edit={EditGuesser}/>
+			<Resource icon={UserIcon} name={apis.users} list={User.UserList} edit={User.UserEdit} create={User.UserCreate} />
+			<Resource icon={UserIcon} name={apis.cards} list={ListGuesser} edit={EditGuesser}/>
 		</AdminUI>
 	);
 }

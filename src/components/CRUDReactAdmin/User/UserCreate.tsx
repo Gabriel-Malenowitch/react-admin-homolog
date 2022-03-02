@@ -6,9 +6,12 @@ import {
 } from "react-admin";
 
 
+//<(()=>(<><button>Botão muito top</button></>))()/>
+const Aee = ()=>(<><button>Botão muito top</button></>);
+
 export function UserCreate(props: CreateProps){
 	return(
-		<Create {...props}>
+		<Create {...props} title={<><button>Botão muito top</button><h1>AAAAAAAAEEEEEEEEEE</h1></>}>
 			<SimpleForm>
 				<AutocompleteInput source="name" choices={[
 					{id: 0, name: "Cleiton"},
